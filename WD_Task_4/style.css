@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+}
+
+nav {
+  background-color: #333;
+  padding: 1px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+nav ul li a.active {
+  color: #ff6600;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+
+.typewriter {
+  text-align: center;
+  margin-top: 100px; /* Adjust as needed */
+}
+
+.typewriter h1 {
+  font-size: 48px;
+  color: #333;
+}
+
+.typewriter-text {
+  margin-top: 20px;
+}
+
+.typewriter-text .typed-text {
+  color: #333;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.typewriter-text .cursor {
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 36px;
+  background-color: #333;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.profile-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+}
+
+.header {
+  background: linear-gradient(to right, #ff6600, #ff3399); /* Example gradient */
+  color: #fff;
+  height: 65vh;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 48px;
+}
+
+.profile-image {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+}
+

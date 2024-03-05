@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chetan Gautam - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="profile-image">
+      <img src="profile.jpg" alt="Chetan Gautam">
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <div id="nameError" class="error"></div>
+  
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required>
+      <div id="emailError" class="error"></div>
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <div id="messageError" class="error"></div>
+  
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+  
+    form.addEventListener('submit', function(event) {
+      let errors = false;
+  
+      if (nameInput.value.trim() === '') {
+        document.getElementById('nameError').textContent = 'Please enter your name.';
+        errors = true;
+      } else {
+        document.getElementById('nameError').textContent = '';
+      }
+  
+      if (emailInput.value.trim() === '' || !isValidEmail(emailInput.value.trim())) {
+        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        errors = true;
+      } else {
+        document.getElementById('emailError').textContent = '';
+      }
+  
+      if (messageInput.value.trim() === '') {
+        document.getElementById('messageError').textContent = 'Please enter your message.';
+        errors = true;
+      } else {
+        document.getElementById('messageError').textContent = '';
+      }
+  
+      if (errors) {
+        event.preventDefault(); // Prevent form submission if there are errors
+      }
+    });
+  
+    function isValidEmail(email) {
+      // This is a basic email validation regex, you can replace it with a more sophisticated one if needed
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+  
+  </body>
+  </html>  

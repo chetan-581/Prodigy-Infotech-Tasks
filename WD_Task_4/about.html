@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="profile-image">
+      <img src="profile.jpg" alt="Chetan Gautam">
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>About Me</h2>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#soft-skills">Soft Skills</a></li>
+        <li><a href="#technical-skills">Technical Skills</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam deserunt modi quam ea consequuntur, maxime, dicta libero cumque cum odio sed sequi cupiditate quos repudiandae optio aliquid nisi ut quae. Praesentium eius explicabo itaque, earum harum placeat minima officia in quia quaerat consequuntur ratione omnis hic unde eum laborum natus?</p>
+      <section id="education">
+        <h2>Education</h2>
+        <div class="qualification">
+          <div class="year">2023:</div>
+          <div class="toggle-btn">MCA - AKTU Lucknow</div>
+          <div class="details">
+            Master of Computer Applications (MCA) from AKTU Lucknow in 2023.
+          </div>
+        </div>
+
+        <div class="qualification">
+          <div class="year">2020:</div>
+          <div class="toggle-btn">BCA - DBRAU Agra</div>
+          <div class="details">
+            Bachelor of Computer Applications (BCA) from DBRAU Agra in 2020.
+          </div>
+        </div>
+
+        <div class="qualification">
+          <div class="year">2017:</div>
+          <div class="toggle-btn">12th Grade</div>
+          <div class="details">
+            Completed 12th Grade in 2017.
+          </div>
+        </div>
+
+        <div class="qualification">
+          <div class="year">2015:</div>
+          <div class="toggle-btn">10th Grade</div>
+          <div class="details">
+            Completed 10th Grade in 2015.
+          </div>
+        </div>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <!-- Add experience content here -->
+      </section>
+      <section id="soft-skills">
+        <h2>Soft Skills</h2>
+        <div class="container">
+          <h1>Soft Skills</h1>
+          <ul id="skillList">
+            <li>Communication Skills</li>
+            <li>Problem-Solving Skills</li>
+            <li>Teamwork and Collaboration</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+            <li>Leadership</li>
+            <li>Creativity</li>
+            <li>Attention to Detail</li>
+            <li>Customer Focus</li>
+          </ul>
+        </div>
+      </section>
+      <section id="technical-skills" class="fade-in">
+        <h2>Technical Skills</h2>
+        <div class="container">
+          <div class="card">
+            <img src="https://www.python.org/static/community_logos/python-logo.png" alt="Python Logo">
+            <h3>Python</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+            <h3>JavaScript</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/R_logo.png" alt="R Logo">
+            <h3>R</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/de/3/30/Java_programming_language_logo.svg" alt="Java Logo">
+            <h3>Java</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C/C++ Logo">
+            <h3>C/C++</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/62/MySQL.svg" alt="MySQL Logo">
+            <h3>MySQL</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML Logo">
+            <h3>HTML</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
+            <h3>CSS</h3>
+          </div>
+
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo">
+            <h3>React</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+  const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+  const contentSections = document.querySelectorAll('.content section');
+  const toggleBtns = document.querySelectorAll('.toggle-btn');
+  const paragraph = document.querySelector('.content p');
+
+  // Initially hide all content sections except for the "About Me" section
+  contentSections.forEach(section => {
+    section.style.display = 'none';
+  });
+  document.getElementById('about').style.display = 'block'; // Assuming 'about' is the ID of the "About Me" section
+
+  // Event listener for sidebar links
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+
+      // Remove 'active' class from all sidebar links
+      sidebarLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      // Add 'active' class to the clicked sidebar link
+      this.classList.add('active');
+
+      // Hide the paragraph
+      paragraph.style.display = 'none';
+
+      // Hide all content sections
+      contentSections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the related content section
+      const targetId = this.getAttribute('href').substring(1); // Get the ID of the related content section
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.style.display = 'block';
+      }
+    });
+  });
+
+  // Event listener for toggle buttons
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', function(event) {
+      event.preventDefault(); 
+      const details = this.nextElementSibling;
+      details.classList.toggle('active');
+    });
+  });
+});
+
+  </script>
+</body>
+</html>

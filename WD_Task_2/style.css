@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(rgb(243, 129, 129), rgb(100, 212, 100), rgb(79, 79, 170)); */
+    background: #000;
+    user-select: none;
+  }
+  
+  .stopwatch{
+    width: 50%;
+    height: 40%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 50px auto;
+    background-color: rgba(152, 194, 231, 0.198);
+    animation: none;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px rgba(152, 194, 231, 0.5);
+    }
+    to {
+      box-shadow: 0 0 20px rgba(152, 194, 231, 2);
+    }
+  }
+  
+  .display {
+    font-size: 100px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: aliceblue;
+  }
+  
+  .controls button {
+    font-size: 16px;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #lapList {
+    width: 70%;
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+  }
+  
+
+
+  .btn41-43 {
+    padding: 10px 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .btn-41 {
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 1;
+    color: white;
+  }
+  
+  .btn-41:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  .btn-41:active {
+    top: 2px;
+  }

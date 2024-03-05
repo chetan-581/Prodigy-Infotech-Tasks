@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", cursive;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(/WD_Task_5/3.jpg);
+  background-size: cover;
+  backdrop-filter: blur(10px);
+}
+
+.card{
+  width: 40%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(52, 152, 219, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 20px; /* Rounded corners for the card */
+  padding: 20px; /* Padding for inner content */
+
+}
+input{
+  font-weight: 500;
+  color: black;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  margin: 10px;
+  font-size: 40px;
+  color: white;
+  
+}
+
+#search {
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px grey;
+  border: 2px solid #ccc; 
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+/* Glow effect when input is focused */
+#search:focus {
+  border-color: dodgerblue; /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(30, 143, 255, 0.681); /* Add box shadow for glow effect */
+}
+
+/* Center aligning the form */
+.row {
+  text-align: center;
+}
